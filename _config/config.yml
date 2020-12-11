@@ -1,0 +1,10 @@
+---
+Name: minifyhtml
+After:
+  - requestprocessors
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Control\Director:
+    properties:
+      Middlewares:
+        MinifyHTMLMiddleware: '%$Innoweb\MinifyHTML\Middleware\MinifyHTMLMiddleware'

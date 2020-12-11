@@ -1,0 +1,36 @@
+<?php
+
+namespace Innoweb\MinifyHTML\Middleware;
+
+use Innoweb\MinifyHTML\Util\HTMLMinifier;
+use SilverStripe\Control\HTTPRequest;
+use SilverStripe\Control\HTTPResponse;
+use SilverStripe\Control\Middleware\HTTPMiddleware;
+
+class MinifyHTMLMiddleware implements HTTPMiddleware
+{
+    /**
+     * Generate response for the given request
+     *
+     * @param HTTPRequest $request
+     * @param callable $delegate
+     * @return HTTPResponse
+     */
+    public function process(HTTPRequest $request, callable $delegate)
+    {
+        /** @var HTTPResponse $response */
+        $response = $delegate($request);
+        if (!$response) {
+            return null;
+        }
+
+        if ($request->routeParams()['Controller'] != 'SilverStripe\Admin\AdminRootController') {
+            $body = $response->getBody();
+            $body = HTMLMinifier::minify($body);
+            $response->setBody($body);
+        }
+
+        return $response;
+    }
+
+}

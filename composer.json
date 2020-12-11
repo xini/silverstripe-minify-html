@@ -1,0 +1,25 @@
+{
+	"name": "innoweb/silverstripe-minify-html",
+	"description": "Minifies the HTML output for all frontend requets using a middleware.",
+	"type": "silverstripe-vendormodule",
+	"license": "BSD-3-Clause",
+	"keywords": ["silverstripe", "hmtl", "minify", "performance"],
+	"homepage": "https://github.com/xini/silverstripe-minify-html",
+	"support": {
+		"issues": "https://github.com/xini/silverstripe-minify-html/issues"
+	},
+	"authors": [{
+		"name": "Florian Thoma",
+		"homepage": "https://innoweb.com.au"
+	}],
+	"require": {
+		"silverstripe/vendor-plugin": "^1.0",
+		"silverstripe/cms": "^4",
+		"voku/html-min": "^4.4.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"Innoweb\\MinifyHTML\\": "src/"
+		}
+	}
+}
