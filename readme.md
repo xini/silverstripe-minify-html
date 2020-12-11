@@ -27,91 +27,91 @@ The config variables are derived from voku's library and adjusted to work with S
 ```
 Innoweb\MinifyHTML\Util\HTMLMinifier:
 
-    // Disable all optimisations, e.g. for dev environment
-	enable_minification: true
-	
-	// optimize html via voku's "HtmlDomParser()"
-	optimize_via_html_dom_parser: true 
-	
-	// remove default HTML comments 
-	// (depends on optimize_via_html_dom_parser: true)
-    remove_comments: true 
-	
-	// sum-up extra whitespace from the Dom
-	// (depends on optimize_via_html_dom_parser: true)
-    sum_up_whitespace: true 
-	
-	// remove whitespace around tags
-	// (depends on optimize_via_html_dom_parser: true)
-    remove_whitespace_around_tags: true 
-	
-	// optimize html attributes
-	// (depends on optimize_via_html_dom_parser: true)
-    optimize_attributes: true 
-	
-	// remove optional "http:"-prefix from attributes
-	// (depends on optimize_via_html_dom_parser: true)
-	// (disabled by default)
-    remove_http_prefix_from_attributes: false 
-	
-	// remove optional "https:"-prefix from attributes
-	// (depends on optimize_via_html_dom_parser: true)
-	// (disabled by default)
-    remove_https_prefix_from_attributes: false 
-	
-	// remove defaults
-	// (depends on optimize_via_html_dom_parser: true)
-	// (disabled by default)
-    remove_default_attributes: false 
-	
-	// remove deprecated anchor-jump
-	// (depends on optimize_via_html_dom_parser: true)
-	// (disabled by default)
-    remove_deprecated_anchor_name: false 
-	
-	// remove deprecated charset-attribute - the browser will use the charset from the HTTP-Header, anyway
-	// (disabled by default)
-    remove_deprecated_script_charset_attribute: false 
-	
-	// remove deprecated script-mime-types
-    remove_deprecated_type_from_script_tag: true 
-	
-	// remove "type=text/css" for css links
-    remove_deprecated_type_from_stylesheet_link: true 
-	
-	// remove "media="all" from all links and styles
-	// (disabled by default)
-    remove_default_media_type_from_style_and_link_tag: false 
-	
-	// remove type="submit" from button tags
-	// (disabled by default)
-    remove_default_type_from_button: false 
-	
-	// remove some empty attributes
-	// (depends on optimize_via_html_dom_parser: true)
-    remove_empty_attributes: true 
-	
-	// remove 'value=""' from empty <input>
-	// (depends on optimize_via_html_dom_parser: true)
-    remove_value_from_empty_input: true 
-	
-	// sort css-class-names, for better gzip results
-	// (depends on optimize_via_html_dom_parser: true)
-    sort_css_class_names: true 
-	
-	// sort html-attributes, for better gzip results
-	// (depends on optimize_via_html_dom_parser: true)
-    sort_html_attributes: true 
-	
-	// remove more (aggressive) spaces in the dom
-	// (disabled by default)
-    remove_spaces_between_tags: false 
-	
-	// remove quotes e.g. class="lall" => class=lall
-    remove_omitted_quotes: true 
-	
-	// remove ommitted html tags e.g. <p>lall</p> => <p>lall 
-    remove_omitted_html_tags: true 
+  // Disable all optimisations, e.g. for dev environment
+  enable_minification: true
+  
+  // optimize html via voku's "HtmlDomParser()"
+  optimize_via_html_dom_parser: true 
+  
+  // remove default HTML comments 
+  // (depends on optimize_via_html_dom_parser: true)
+  remove_comments: true 
+  
+  // sum-up extra whitespace from the Dom
+  // (depends on optimize_via_html_dom_parser: true)
+  sum_up_whitespace: true 
+  
+  // remove whitespace around tags
+  // (depends on optimize_via_html_dom_parser: true)
+  remove_whitespace_around_tags: true 
+  
+  // optimize html attributes
+  // (depends on optimize_via_html_dom_parser: true)
+  optimize_attributes: true 
+  
+  // remove optional "http:"-prefix from attributes
+  // (depends on optimize_via_html_dom_parser: true)
+  // (disabled by default)
+  remove_http_prefix_from_attributes: false 
+  
+  // remove optional "https:"-prefix from attributes
+  // (depends on optimize_via_html_dom_parser: true)
+  // (disabled by default)
+  remove_https_prefix_from_attributes: false 
+  
+  // remove defaults
+  // (depends on optimize_via_html_dom_parser: true)
+  // (disabled by default)
+  remove_default_attributes: false 
+  
+  // remove deprecated anchor-jump
+  // (depends on optimize_via_html_dom_parser: true)
+  // (disabled by default)
+  remove_deprecated_anchor_name: false 
+  
+  // remove deprecated charset-attribute - the browser will use the charset from the HTTP-Header, anyway
+  // (disabled by default)
+  remove_deprecated_script_charset_attribute: false 
+  
+  // remove deprecated script-mime-types
+  remove_deprecated_type_from_script_tag: true 
+  
+  // remove "type=text/css" for css links
+  remove_deprecated_type_from_stylesheet_link: true 
+  
+  // remove "media="all" from all links and styles
+  // (disabled by default)
+  remove_default_media_type_from_style_and_link_tag: false 
+  
+  // remove type="submit" from button tags
+  // (disabled by default)
+  remove_default_type_from_button: false 
+  
+  // remove some empty attributes
+  // (depends on optimize_via_html_dom_parser: true)
+  remove_empty_attributes: true 
+  
+  // remove 'value=""' from empty <input>
+  // (depends on optimize_via_html_dom_parser: true)
+  remove_value_from_empty_input: true 
+  
+  // sort css-class-names, for better gzip results
+  // (depends on optimize_via_html_dom_parser: true)
+  sort_css_class_names: true 
+  
+  // sort html-attributes, for better gzip results
+  // (depends on optimize_via_html_dom_parser: true)
+  sort_html_attributes: true 
+  
+  // remove more (aggressive) spaces in the dom
+  // (disabled by default)
+  remove_spaces_between_tags: false 
+  
+  // remove quotes e.g. class="lall" => class=lall
+  remove_omitted_quotes: true 
+  
+  // remove ommitted html tags e.g. <p>lall</p> => <p>lall 
+  remove_omitted_html_tags: true 
   
 ```
 
