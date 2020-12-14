@@ -108,10 +108,12 @@ Innoweb\MinifyHTML\Util\HTMLMinifier:
   remove_spaces_between_tags: false 
   
   // remove quotes e.g. class="lall" => class=lall
-  remove_omitted_quotes: true 
+  // (disabled by default)
+  remove_omitted_quotes: false 
   
   // remove ommitted html tags e.g. <p>lall</p> => <p>lall 
-  remove_omitted_html_tags: true 
+  // (disabled by default)
+  remove_omitted_html_tags: false 
   
 ```
 

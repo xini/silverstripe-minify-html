@@ -133,13 +133,13 @@ class HTMLMinifier
      * remove quotes e.g. class="lall" => class=lall
      * @var bool
      */
-    private static $remove_omitted_quotes = true;
+    private static $remove_omitted_quotes = false;
 
     /**
      * remove ommitted html tags e.g. <p>lall</p> => <p>lall
      * @var bool
      */
-    private static $remove_omitted_html_tags = true;
+    private static $remove_omitted_html_tags = false;
 
     public static function minify($htmlContent)
     {
