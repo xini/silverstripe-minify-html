@@ -27,6 +27,7 @@ class MinifyHTMLMiddleware implements HTTPMiddleware
         if (
             $request->routeParams()['Controller'] != 'SilverStripe\Admin\AdminRootController'
             && $request->routeParams()['Controller'] != '%$SilverStripe\GraphQL\Controller.admin'
+			&& strpos(strtolower($response->getHeader('content-type')), 'text/html') !== false
         ) {
             $body = $response->getBody();
             $body = HTMLMinifier::minify($body);
