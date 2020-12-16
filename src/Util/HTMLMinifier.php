@@ -25,7 +25,7 @@ class HTMLMinifier
      * Remove default HTML comments
      * @var bool
      */
-    private static $remove_comments = true;
+    private static $remove_comments = false;
 
     /**
      * Sum-up extra whitespace from the Dom

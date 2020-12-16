@@ -35,7 +35,8 @@ Innoweb\MinifyHTML\Util\HTMLMinifier:
   
   // remove default HTML comments 
   // (depends on optimize_via_html_dom_parser: true)
-  remove_comments: true 
+  // (disabled by default)
+  remove_comments: false 
   
   // sum-up extra whitespace from the Dom
   // (depends on optimize_via_html_dom_parser: true)

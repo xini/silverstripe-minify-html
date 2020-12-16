@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.4]
+
+* disable removal of comments
+
 ## [1.0.3]
 
-* disable removal of optional cosing tags and attribute quotes
+* disable removal of optional closing tags and attribute quotes
 
 ## [1.0.2]
 
