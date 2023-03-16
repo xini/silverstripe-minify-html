@@ -9,8 +9,10 @@ Minifies the HTML output for all frontend requets using a middleware wrapping [v
 
 ## Requirements
 
-* Silverstripe CMS 4.x
+* Silverstripe CMS 5.x
 * [voku/html-min 4](https://packagist.org/packages/voku/html-min)
+
+Note: this version is compatible with SilverStripe 5. For SilverStripe 4, please see the [1 release line](https://github.com/xini/silverstripe-minify-html/tree/1).
 
 ## Installation
 
