@@ -25,7 +25,8 @@ class MinifyHTMLMiddleware implements HTTPMiddleware
         }
 
         if (
-            $request->routeParams()['Controller'] != 'SilverStripe\Admin\AdminRootController'
+            array_key_exists('Controller', $request->routeParams())
+            && $request->routeParams()['Controller'] != 'SilverStripe\Admin\AdminRootController'
             && $request->routeParams()['Controller'] != '%$SilverStripe\GraphQL\Controller.admin'
 			&& strpos(strtolower($response->getHeader('content-type')), 'text/html') !== false
         ) {
