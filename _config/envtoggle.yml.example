@@ -1,0 +1,13 @@
+---
+Name: minifyhtml-envtoggle-disable
+---
+Innoweb\MinifyHTML\Util\HTMLMinifier:
+    enable_minification: false
+
+---
+Name: minifyhtml-envtoggle-enable
+Only:
+    envvarset: HTML_MINIFICATION_ENABLED
+---
+Innoweb\MinifyHTML\Util\HTMLMinifier:
+    enable_minification: true
