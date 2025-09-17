@@ -9,8 +9,10 @@ Minifies the HTML output for all frontend requets using a middleware wrapping [v
 
 ## Requirements
 
-* Silverstripe CMS 5.x
+* Silverstripe CMS 6.x
 * [voku/html-min 4](https://packagist.org/packages/voku/html-min)
+
+Note: this version is compatible with SilverStripe 6. For SilverStripe 5, please see the [2 release line](https://github.com/xini/silverstripe-minify-html/tree/2).
 
 Note: this version is compatible with SilverStripe 5. For SilverStripe 4, please see the [1 release line](https://github.com/xini/silverstripe-minify-html/tree/1).
 
@@ -21,6 +23,14 @@ Install the module using composer:
 composer require innoweb/silverstripe-minify-html dev-master
 ```
 Then run dev/build.
+
+## Enabling minification
+
+Once installed, HTML minification is enabled by default.
+
+See the example configuration in `config/envtoggle.yml.example` for how to toggle minification on/off for your environment via a `.env` variable.
+
+In the example, a `.env` variable named `HTML_MINIFICATION_ENABLED` can be added, which will enable/disable minification based on whether the value is true or false/absent.
 
 ## Configuration
 
