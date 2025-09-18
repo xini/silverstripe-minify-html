@@ -14,8 +14,6 @@ Minifies the HTML output for all frontend requets using a middleware wrapping [v
 
 Note: this version is compatible with SilverStripe 6. For SilverStripe 5, please see the [2 release line](https://github.com/xini/silverstripe-minify-html/tree/2).
 
-Note: this version is compatible with SilverStripe 5. For SilverStripe 4, please see the [1 release line](https://github.com/xini/silverstripe-minify-html/tree/1).
-
 ## Installation
 
 Install the module using composer:
