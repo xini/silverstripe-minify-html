@@ -14,9 +14,9 @@ class MinifyHTMLMiddleware implements HTTPMiddleware
      *
      * @param HTTPRequest $request
      * @param callable $delegate
-     * @return HTTPResponse
+     * @return HTTPResponse|null
      */
-    public function process(HTTPRequest $request, callable $delegate)
+    public function process(HTTPRequest $request, callable $delegate): ?HTTPResponse
     {
         /** @var HTTPResponse $response */
         $response = $delegate($request);
@@ -28,7 +28,7 @@ class MinifyHTMLMiddleware implements HTTPMiddleware
             array_key_exists('Controller', $request->routeParams())
             && $request->routeParams()['Controller'] != 'SilverStripe\Admin\AdminRootController'
             && $request->routeParams()['Controller'] != '%$SilverStripe\GraphQL\Controller.admin'
-			&& strpos(strtolower($response->getHeader('content-type')), 'text/html') !== false
+			&& str_contains(strtolower($response->getHeader('content-type')), 'text/html')
         ) {
             $body = $response->getBody();
             $body = HTMLMinifier::minify($body);
